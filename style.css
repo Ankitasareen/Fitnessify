@@ -7,6 +7,7 @@
     text-transform: capitalize;
     transition: all 0.3s linear;
     outline: none;
+    scroll-behavior: smooth;
 }
 *::selection {
     background-color: rgb(65, 0, 82);
@@ -266,12 +267,6 @@ footer {
     text-align: center;
 }
 
-@media (max-width: 760px) {
-    .button-container {
-        flex-direction: column;
-    }
-}
-
 .button-left {
     /* padding: 0 25px; */
     text-align: center;
@@ -356,4 +351,26 @@ footer {
 .row-right > img {
     height: 400px;
     object-fit: contain;
+}
+
+.content-program {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+
+.content-program > div {
+    margin: auto;
+}
+
+@media (max-width: 760px) {
+    .button-container {
+        flex-direction: column;
+    }
+    .content-about {
+        display: block;
+    }
+    .row-right > img {
+        display: none;
+    }
 }
