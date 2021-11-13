@@ -1,0 +1,555 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.3s linear;
+    outline: none;
+}
+*::selection{
+    background-color: rgb(65, 0, 82);
+    color: #fff;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+/* Start Header */
+header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),
+    url(./images/bakcgro.gif);
+    background-position: center;
+    background-size: cover;
+    clip-path: polygon(100% 0, 100% 91%, 49% 100%, 0 89%, 0 0);
+}
+nav{
+    padding: 2% 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+}
+nav .logo{
+    font-size: 3rem;
+    cursor: pointer;
+}
+nav .logo span{
+    color: rgb(35 146 225);
+}
+nav .links{
+    padding-left: 0;
+}
+nav .links li{
+    display: inline-block;
+    margin-left: 1rem;
+    font-size: 1.5rem;
+}
+nav .links li a{
+    color: #fff;
+}
+.links .active{
+    color: yellowgreen;
+}
+nav .links li a:hover{
+    color: yellowgreen;
+}
+header .content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+header .content h1{
+    font-size: 3rem;
+    
+    text-transform: uppercase;
+    text-align: center;
+    color: #be15c1;
+}
+.btn{
+    padding: 1rem 2.5rem;
+    background-color: transparent;
+    border: 0.3rem solid rgb(102, 204, 235);
+    color: rgb(119, 205, 231);
+    margin-top: 1.8rem;
+    cursor: pointer;
+    border-radius: 2.9rem;
+    font-size: 2rem;
+    
+}
+.btn:hover{
+    background-color: rgb(119, 205, 231);
+    color: #fff;
+}
+nav .open,.close{
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: rgb(205, 50, 89);
+    display: none;
+}
+@media (max-width:850px) {
+    nav .links{
+        height: 25rem;
+        width: 60%;
+        position: fixed;
+        top: 0;
+        right:0;
+        border-radius: 1.2rem;
+        background-color: #fff;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 9999;
+    }
+    nav .links li{
+        font-size: 1.8rem;
+        margin: 0.5rem;
+    }
+    nav .links li a{
+        color: #000;
+    }
+    nav .open,nav .links .close{
+        display: block;
+        position: absolute;
+        top: 1.8rem;
+        right: 1.8rem;
+    }
+    header .content h1{
+        font-size: 6rem;
+    }
+}
+
+/* Start About */
+.about .row{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 2% 6%;
+}
+.about .row .image{
+    flex: 1 1 40rem;
+    padding: 2rem;
+}
+.about .row .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.about .row .content{
+    flex: 1 1 40rem;
+    padding: 2rem;
+    text-align: center;
+}
+.about .row .content h1{
+    font-size: 3rem;
+    color: rgba(247, 12, 141, 0.966);
+    margin-bottom: 5rem;
+}
+.about .row .content p{
+    line-height: 1.7;
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+}
+/* Start Services */
+.services{
+    min-height: 100vh;
+    text-align: center;
+    padding: 2% 6%;
+}
+.services h1{
+    font-size: 1.8rem;
+    padding: 0.5rem;
+    display: inline-block;
+    color: rgb(26, 211, 195);
+    border-bottom: .3rem solid rgb(15, 22, 1);
+    margin-bottom: 1.8rem;
+}
+.services .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.services .container .box{
+    width: 70rem;
+    height: 45rem;
+    margin: .5rem;
+    position: relative;
+    overflow: hidden;
+}
+.services .container .box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.services .container .box .info{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transform-origin: bottom;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.services .container .box:hover .info{
+    transform: translate(-50%, -50%) scale(1);
+}
+.services .container .box .info h3{
+    font-size: 3rem;
+    color: yellowgreen;
+    margin-bottom: 1.2rem;
+}
+.services .container .box .info p{
+    line-height: 2;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 0 1rem;
+    margin-bottom: 1.2rem;
+}
+
+/* Start Footer */
+footer{
+    color: #fff;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.concanvas {
+    justify-content:center;
+    width: 280px;
+    min-height: 280px;
+    height: auto;
+    border-radius: 5px;
+    margin: 2% auto;
+    box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
+    padding: 2%;
+    background-image: linear-gradient(-225deg, #E3FDF5 100%, #FFE6FA 0%);
+
+}
+
+#row1 {padding: 20px 20px 5px 20px;
+    overflow: hidden; }
+
+.button-container {display: block; text-align: center;}
+
+.button-left {
+/* padding: 0 25px; */
+text-align: center;
+margin-left:20px;
+float: left;
+font-size: 75%; }
+
+.button-right {
+/* padding: 0 65px; */
+text-align: center;
+margin-left:40px;
+float: right;
+font-size: 75%; }
+
+.button-centre {
+padding: 0 35px; 
+margin-left:30px;
+text-align: center;
+float:center;
+font-size: 75%; }
+
+.hbtn {
+    /* padding: 1rem 2.5rem; */
+    background-color: transparent;
+    border: 0.3rem solid rgb(102, 204, 235);
+    color: rgb(119, 205, 231);
+    cursor: pointer;
+    border-radius: 2.9rem;
+    /* font-size: 2rem; */
+}
+
+.hbtn:hover{
+    background-color: rgb(119, 205, 231);
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
