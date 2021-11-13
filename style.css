@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -8,69 +8,71 @@
     transition: all 0.3s linear;
     outline: none;
 }
-*::selection{
+*::selection {
     background-color: rgb(65, 0, 82);
     color: #fff;
 }
-body{
-    font-family: 'Open Sans', sans-serif;
+body {
+    font-family: "Open Sans", sans-serif;
+    background-color: #000;
+    color: #fff;
 }
 /* Start Header */
-header{
+header {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.1)),
-    url(./images/bakcgro.gif);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+        url(./bakcgro.gif);
     background-position: center;
     background-size: cover;
     clip-path: polygon(100% 0, 100% 91%, 49% 100%, 0 89%, 0 0);
 }
-nav{
+nav {
     padding: 2% 6%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: #fff;
 }
-nav .logo{
+nav .logo {
     font-size: 3rem;
     cursor: pointer;
 }
-nav .logo span{
+nav .logo span {
     color: rgb(35 146 225);
 }
-nav .links{
+nav .links {
     padding-left: 0;
 }
-nav .links li{
+nav .links li {
     display: inline-block;
     margin-left: 1rem;
     font-size: 1.5rem;
 }
-nav .links li a{
+nav .links li a {
     color: #fff;
 }
-.links .active{
+.links .active {
     color: yellowgreen;
 }
-nav .links li a:hover{
+nav .links li a:hover {
     color: yellowgreen;
 }
-header .content{
+header .content {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
 }
-header .content h1{
+header .content h1 {
     font-size: 3rem;
-    
+
     text-transform: uppercase;
     text-align: center;
     color: #be15c1;
 }
-.btn{
+.btn {
     padding: 1rem 2.5rem;
     background-color: transparent;
     border: 0.3rem solid rgb(102, 204, 235);
@@ -79,25 +81,25 @@ header .content h1{
     cursor: pointer;
     border-radius: 2.9rem;
     font-size: 2rem;
-    
 }
-.btn:hover{
+.btn:hover {
     background-color: rgb(119, 205, 231);
     color: #fff;
 }
-nav .open,.close{
+nav .open,
+.close {
     font-size: 1.8rem;
     cursor: pointer;
     color: rgb(205, 50, 89);
     display: none;
 }
-@media (max-width:850px) {
-    nav .links{
+@media (max-width: 850px) {
+    nav .links {
         height: 25rem;
         width: 60%;
         position: fixed;
         top: 0;
-        right:0;
+        right: 0;
         border-radius: 1.2rem;
         background-color: #fff;
         display: none;
@@ -106,26 +108,30 @@ nav .open,.close{
         flex-direction: column;
         z-index: 9999;
     }
-    nav .links li{
+    nav .links li {
         font-size: 1.8rem;
         margin: 0.5rem;
     }
-    nav .links li a{
+    nav .links li a {
         color: #000;
     }
-    nav .open,nav .links .close{
+    nav .open,
+    nav .links .close {
         display: block;
         position: absolute;
         top: 1.8rem;
         right: 1.8rem;
     }
-    header .content h1{
+    header .content h1 {
         font-size: 6rem;
+    }
+    .btn {
+        font-size: 20px;
     }
 }
 
 /* Start About */
-.about .row{
+.about .row {
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -133,64 +139,71 @@ nav .open,.close{
     flex-wrap: wrap;
     padding: 2% 6%;
 }
-.about .row .image{
+.about .row .image {
     flex: 1 1 40rem;
     padding: 2rem;
 }
-.about .row .image img{
+.about .row .image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.about .row .content{
+.about .row .content {
     flex: 1 1 40rem;
     padding: 2rem;
     text-align: center;
 }
-.about .row .content h1{
+.about .row .content h1 {
     font-size: 3rem;
-    color: rgba(247, 12, 141, 0.966);
-    margin-bottom: 5rem;
+    color: rgba(28, 12, 247, 0.966);
+    margin-bottom: 40px;
+    font-weight: 700;
 }
-.about .row .content p{
-    line-height: 1.7;
-    font-size: 1.2rem;
+
+.about .row .content h2 {
+    font-size: 2rem;
+    font-weight: 600;
     margin-bottom: 1.2rem;
 }
+
+.about .row .content p {
+    line-height: 1.7;
+    font-size: 1.2rem;
+}
 /* Start Services */
-.services{
+.services {
     min-height: 100vh;
     text-align: center;
     padding: 2% 6%;
 }
-.services h1{
+.services h1 {
     font-size: 1.8rem;
     padding: 0.5rem;
     display: inline-block;
     color: rgb(26, 211, 195);
-    border-bottom: .3rem solid rgb(15, 22, 1);
+    border-bottom: 0.3rem solid rgb(221, 221, 221);
     margin-bottom: 1.8rem;
 }
-.services .container{
+.services .container {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     flex-wrap: wrap;
 }
-.services .container .box{
+.services .container .box {
     width: 70rem;
     height: 45rem;
-    margin: .5rem;
+    margin: 0.5rem;
     position: relative;
     overflow: hidden;
 }
-.services .container .box img{
+.services .container .box img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.services .container .box .info{
+.services .container .box .info {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -204,15 +217,15 @@ nav .open,.close{
     align-items: center;
     flex-direction: column;
 }
-.services .container .box:hover .info{
+.services .container .box:hover .info {
     transform: translate(-50%, -50%) scale(1);
 }
-.services .container .box .info h3{
+.services .container .box .info h3 {
     font-size: 3rem;
     color: yellowgreen;
     margin-bottom: 1.2rem;
 }
-.services .container .box .info p{
+.services .container .box .info p {
     line-height: 2;
     color: #fff;
     font-size: 1.1rem;
@@ -221,7 +234,7 @@ nav .open,.close{
 }
 
 /* Start Footer */
-footer{
+footer {
     color: #fff;
     padding: 2rem;
     text-align: center;
@@ -229,7 +242,7 @@ footer{
 }
 
 .concanvas {
-    justify-content:center;
+    justify-content: center;
     width: 280px;
     min-height: 280px;
     height: auto;
@@ -237,319 +250,110 @@ footer{
     margin: 2% auto;
     box-shadow: 0 9px 50px hsla(20, 67%, 75%, 0.31);
     padding: 2%;
-    background-image: linear-gradient(-225deg, #E3FDF5 100%, #FFE6FA 0%);
-
+    background-image: linear-gradient(-225deg, #e3fdf5 100%, #ffe6fa 0%);
 }
 
-#row1 {padding: 20px 20px 5px 20px;
-    overflow: hidden; }
+#row1 {
+    padding: 20px 20px 5px 20px;
+    overflow: hidden;
+}
 
-.button-container {display: block; text-align: center;}
+.button-container {
+    margin: auto;
+    display: flex;
+    width: 90vw;
+    justify-content: space-between;
+    text-align: center;
+}
+
+@media (max-width: 760px) {
+    .button-container {
+        flex-direction: column;
+    }
+}
 
 .button-left {
-/* padding: 0 25px; */
-text-align: center;
-margin-left:20px;
-float: left;
-font-size: 75%; }
-
-.button-right {
-/* padding: 0 65px; */
-text-align: center;
-margin-left:40px;
-float: right;
-font-size: 75%; }
-
-.button-centre {
-padding: 0 35px; 
-margin-left:30px;
-text-align: center;
-float:center;
-font-size: 75%; }
-
-.hbtn {
-    /* padding: 1rem 2.5rem; */
-    background-color: transparent;
-    border: 0.3rem solid rgb(102, 204, 235);
-    color: rgb(119, 205, 231);
-    cursor: pointer;
-    border-radius: 2.9rem;
-    /* font-size: 2rem; */
+    /* padding: 0 25px; */
+    text-align: center;
+    margin-left: 20px;
+    float: left;
+    font-size: 75%;
 }
 
-.hbtn:hover{
-    background-color: rgb(119, 205, 231);
+.button-right {
+    /* padding: 0 65px; */
+    text-align: center;
+    margin-left: 40px;
+    float: right;
+    font-size: 75%;
+}
+
+.button-centre {
+    padding: 0 35px;
+    margin-left: 30px;
+    text-align: center;
+    float: center;
+    font-size: 75%;
+}
+
+.hbtn {
+    background-image: linear-gradient(
+        to right,
+        #4776e6 0%,
+        #8e54e9 51%,
+        #4776e6 100%
+    );
+    color: rgb(119, 205, 231);
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 20px;
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px rgb(37, 37, 37);
+}
+
+.hbtn > input {
+    background-color: inherit;
+    color: wheat;
+    cursor: pointer;
+}
+
+.hbtn > input:hover {
     color: #fff;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.hbtn:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+
+.chatbot {
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.content-about {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+
+.row-left {
+    grid-column: 1/3;
+}
+
+.row-right {
+    grid-column: 3/4;
+    margin: auto;
+}
+
+.row-right > img {
+    height: 400px;
+    object-fit: contain;
+}
