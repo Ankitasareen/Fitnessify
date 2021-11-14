@@ -363,6 +363,10 @@ footer {
     margin: auto;
 }
 
+.content-program > div > img {
+    border-radius: 10px;
+}
+
 @media (max-width: 760px) {
     .button-container {
         flex-direction: column;
@@ -372,5 +376,14 @@ footer {
     }
     .row-right > img {
         display: none;
+    }
+    .content-program {
+        display: block;
+    }
+    .content-program > div {
+        padding: 20px;
+    }
+    .content-program > div > img {
+        margin: auto;
     }
 }
