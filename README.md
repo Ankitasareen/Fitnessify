@@ -17,7 +17,7 @@
 
 ## Demo
 
-![](https://res.cloudinary.com/ratnakar5938/video/upload/v1636870255/fitnessify/Fitnessify_-_Google_Chrome_2021-11-14_11-20-26_kosuln.mp4)
+https://user-images.githubusercontent.com/80893583/141670091-8fca66f0-760b-4264-a211-ee14b57cbc56.mp4
 
 ![](https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/001/735/417/datas/original.gif)
 
