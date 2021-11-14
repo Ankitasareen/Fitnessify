@@ -311,13 +311,13 @@ footer {
     box-shadow: 0 0 20px rgb(37, 37, 37);
 }
 
-.hbtn > input {
+.hbtn > a {
     background-color: inherit;
     color: wheat;
     cursor: pointer;
 }
 
-.hbtn > input:hover {
+.hbtn > a:hover {
     color: #fff;
 }
 
